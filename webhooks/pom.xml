@@ -150,7 +150,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <javax-annotation-version>1.3.2</javax-annotation-version>
-        <swagger-annotations-version>2.2.30</swagger-annotations-version>
+        <swagger-annotations-version>2.2.40</swagger-annotations-version>
         <autodesk-sdkmanager-version>0.1.0-beta</autodesk-sdkmanager-version>
         <code-findbugs-version>3.0.2</code-findbugs-version>
         <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
