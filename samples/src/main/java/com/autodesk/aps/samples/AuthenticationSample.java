@@ -34,7 +34,6 @@ public class AuthenticationSample {
     String clientSecret = dotenv.get("CLIENT_SECRET");
     String accessToken = dotenv.get("ACCESS_TOKEN");
 
-
     void initialize() {
         SdkManager sdkManager = SdkManagerBuilder.create()
                 .addLogger(new ApsLogger(Level.DEBUG))
@@ -50,8 +49,8 @@ public class AuthenticationSample {
             System.out.println("ExpiresIn : " + response.getExpiresIn());
             System.out.println("TokenType : " + response.getTokenType());
 
-            Instant expiresAtInstant = Instant.ofEpochMilli(response.getExpiresIn());
-            LocalDateTime expiresAtLocal = LocalDateTime.ofInstant(expiresAtInstant, ZoneId.systemDefault());
+            LocalDateTime expiresAtLocal = LocalDateTime.ofInstant(Instant.ofEpochSecond(response.getExpiresAt()),
+                    ZoneId.systemDefault());
             System.out.println("ExpiresAt (Local Time) : " + expiresAtLocal);
 
         } catch (Exception e) {

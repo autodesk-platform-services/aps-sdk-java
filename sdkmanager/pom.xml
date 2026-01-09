@@ -5,7 +5,7 @@
     <artifactId>sdkmanager</artifactId>
     <packaging>jar</packaging>
     <name>APS Java SDK : SDK Manager</name>
-    <version>0.1.0-beta</version>
+    <version>0.1.1-beta</version>
     <description>Common SDK Manager to support the various Autodesk Platform Services SDKs.</description>
     <url>https://aps.autodesk.com/</url>
     <licenses>

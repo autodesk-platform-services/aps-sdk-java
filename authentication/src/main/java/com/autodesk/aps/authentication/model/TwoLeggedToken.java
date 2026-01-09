@@ -23,6 +23,7 @@
 
 package com.autodesk.aps.authentication.model;
 
+import java.time.Instant;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -58,7 +59,7 @@ public class TwoLeggedToken {
   private Integer expiresIn;
 
   public static final String JSON_PROPERTY_EXPIRES_AT = "expires_at";
-  private Integer expiresAt;
+  private Long expiresAt;
 
   public TwoLeggedToken accessToken(String accessToken) {
 
@@ -134,10 +135,11 @@ public class TwoLeggedToken {
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setExpiresIn(Integer expiresIn) {
     this.expiresIn = expiresIn;
+    // set expiresAt based on expiresIn
+    this.expiresAt = Instant.now().getEpochSecond() + expiresIn;
   }
 
-  public TwoLeggedToken expiresAt(Integer expiresAt) {
-
+  public TwoLeggedToken expiresAt(Long expiresAt) {
     this.expiresAt = expiresAt;
     return this;
   }
@@ -152,13 +154,13 @@ public class TwoLeggedToken {
   @JsonProperty(JSON_PROPERTY_EXPIRES_AT)
   @JsonInclude(value = JsonInclude.Include.NON_NULL)
 
-  public Integer getExpiresAt() {
+  public Long getExpiresAt() {
     return expiresAt;
   }
 
   @JsonProperty(JSON_PROPERTY_EXPIRES_AT)
   @JsonInclude(value = JsonInclude.Include.NON_NULL)
-  public void setExpiresAt(Integer expiresAt) {
+  public void setExpiresAt(Long expiresAt) {
     this.expiresAt = expiresAt;
   }
 
