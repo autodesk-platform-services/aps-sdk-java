@@ -5,7 +5,7 @@
     <artifactId>sdkmanager</artifactId>
     <packaging>jar</packaging>
     <name>APS Java SDK : SDK Manager</name>
-    <version>0.1.0-beta</version>
+    <version>0.1.1-beta</version>
     <description>Common SDK Manager to support the various Autodesk Platform Services SDKs.</description>
     <url>https://aps.autodesk.com/</url>
     <licenses>
@@ -119,9 +119,9 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <resilience4j.version>2.2.0</resilience4j.version>
-        <httpcomponents.version>5.5</httpcomponents.version>
+        <httpcomponents.version>5.5.1</httpcomponents.version>
         <jackson.version>2.15.3</jackson.version>
-        <slf4j.version>2.0.9</slf4j.version>
-        <logback.version>1.4.12</logback.version>
+        <slf4j.version>2.0.17</slf4j.version>
+        <logback.version>1.5.21</logback.version>
     </properties>
 </project>
