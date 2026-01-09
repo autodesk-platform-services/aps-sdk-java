@@ -51,7 +51,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
     ItemAttributes.JSON_PROPERTY_RESERVED_TIME,
     ItemAttributes.JSON_PROPERTY_RESERVED_USER_ID,
     ItemAttributes.JSON_PROPERTY_RESERVED_USER_NAME,
-    ItemAttributes.JSON_PROPERTY_EXTENSION
+    ItemAttributes.JSON_PROPERTY_EXTENSION,
+    ItemAttributes.JSON_PROPERTY_PATH_IN_PROJECT
 })
 @JsonTypeName("ItemAttributes")
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -95,6 +96,9 @@ public class ItemAttributes {
 
   public static final String JSON_PROPERTY_EXTENSION = "extension";
   private ItemExtensionWithSchemaLink extension;
+
+  public static final String JSON_PROPERTY_PATH_IN_PROJECT = "pathInProject";
+  private String pathInProject;
 
   public ItemAttributes displayName(String displayName) {
 
@@ -437,6 +441,31 @@ public class ItemAttributes {
     this.extension = extension;
   }
 
+  public ItemAttributes pathInProject(String pathInProject) {
+
+    this.pathInProject = pathInProject;
+    return this;
+  }
+
+  /**
+   * The relative path of the item starting from the root folder of the project.
+   * 
+   * @return pathInProject
+   **/
+  @Schema(required = true, description = "The relative path of the item starting from the root folder of the project.")
+  @JsonProperty(JSON_PROPERTY_PATH_IN_PROJECT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+  public String getPathInProject() {
+    return pathInProject;
+  }
+
+  @JsonProperty(JSON_PROPERTY_PATH_IN_PROJECT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+  public void setPathInProject(String pathInProject) {
+    this.pathInProject = pathInProject;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -458,13 +487,14 @@ public class ItemAttributes {
         Objects.equals(this.reservedTime, itemAttributes.reservedTime) &&
         Objects.equals(this.reservedUserId, itemAttributes.reservedUserId) &&
         Objects.equals(this.reservedUserName, itemAttributes.reservedUserName) &&
-        Objects.equals(this.extension, itemAttributes.extension);
+        Objects.equals(this.extension, itemAttributes.extension) &&
+        Objects.equals(this.pathInProject, itemAttributes.pathInProject);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(displayName, createTime, createUserId, createUserName, lastModifiedTime, lastModifiedUserId,
-        lastModifiedUserName, hidden, reserved, reservedTime, reservedUserId, reservedUserName, extension);
+        lastModifiedUserName, hidden, reserved, reservedTime, reservedUserId, reservedUserName, extension, pathInProject);
   }
 
   @Override
@@ -484,6 +514,7 @@ public class ItemAttributes {
     sb.append("    reservedUserId: ").append(toIndentedString(reservedUserId)).append("\n");
     sb.append("    reservedUserName: ").append(toIndentedString(reservedUserName)).append("\n");
     sb.append("    extension: ").append(toIndentedString(extension)).append("\n");
+    sb.append("    pathInProject: ").append(toIndentedString(pathInProject)).append("\n");
     sb.append("}");
     return sb.toString();
   }
