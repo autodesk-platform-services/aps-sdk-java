@@ -23,12 +23,17 @@ The Developer Portal has everything APS:
 
 ## Java Packages 
 
-- [Authentication](https://central.sonatype.com/artifact/com.autodesk.aps/authentication-sdk)
-- [Data Management](https://central.sonatype.com/artifact/com.autodesk.aps/datamanagement-sdk)
-- [Model Derivative](https://central.sonatype.com/artifact/com.autodesk.aps/modelderivative-sdk)
-- [OSS](https://central.sonatype.com/artifact/com.autodesk.aps/oss-sdk)
-- [SDK Manager](https://central.sonatype.com/artifact/com.autodesk.aps/sdkmanager)
-- [Webhooks](https://central.sonatype.com/artifact/com.autodesk.aps/webhooks-sdk)
+[![Maven Package Site](https://img.shields.io/badge/Maven-com.autodesk.aps%3Aauthentication--sdk-blue.svg)](https://central.sonatype.com/artifact/com.autodesk.aps/authentication-sdk) [![Latest version](https://img.shields.io/maven-central/v/com.autodesk.aps/authentication-sdk.svg?label=Release)](https://central.sonatype.com/artifact/com.autodesk.aps/authentication-sdk) [![Latest Beta version](https://img.shields.io/maven-central/v/com.autodesk.aps/authentication-sdk.svg?label=Latest)](https://central.sonatype.com/artifact/com.autodesk.aps/authentication-sdk/versions)
+
+[![Maven Package Site](https://img.shields.io/badge/Maven-com.autodesk.aps%3Adatamanagement--sdk-blue.svg)](https://central.sonatype.com/artifact/com.autodesk.aps/datamanagement-sdk) [![Latest version](https://img.shields.io/maven-central/v/com.autodesk.aps/datamanagement-sdk.svg?label=Release)](https://central.sonatype.com/artifact/com.autodesk.aps/datamanagement-sdk) [![Latest Beta version](https://img.shields.io/maven-central/v/com.autodesk.aps/datamanagement-sdk.svg?label=Latest)](https://central.sonatype.com/artifact/com.autodesk.aps/datamanagement-sdk/versions)
+
+[![Maven Package Site](https://img.shields.io/badge/Maven-com.autodesk.aps%3Amodelderivative--sdk-blue.svg)](https://central.sonatype.com/artifact/com.autodesk.aps/modelderivative-sdk) [![Latest version](https://img.shields.io/maven-central/v/com.autodesk.aps/modelderivative-sdk.svg?label=Release)](https://central.sonatype.com/artifact/com.autodesk.aps/modelderivative-sdk) [![Latest Beta version](https://img.shields.io/maven-central/v/com.autodesk.aps/modelderivative-sdk.svg?label=Latest)](https://central.sonatype.com/artifact/com.autodesk.aps/modelderivative-sdk/versions)
+
+[![Maven Package Site](https://img.shields.io/badge/Maven-com.autodesk.aps%3Aoss--sdk-blue.svg)](https://central.sonatype.com/artifact/com.autodesk.aps/oss-sdk) [![Latest version](https://img.shields.io/maven-central/v/com.autodesk.aps/oss-sdk.svg?label=Release)](https://central.sonatype.com/artifact/com.autodesk.aps/oss-sdk) [![Latest Beta version](https://img.shields.io/maven-central/v/com.autodesk.aps/oss-sdk.svg?label=Latest)](https://central.sonatype.com/artifact/com.autodesk.aps/oss-sdk/versions)
+
+[![Maven Package Site](https://img.shields.io/badge/Maven-com.autodesk.aps%3Asdkmanager-blue.svg)](https://central.sonatype.com/artifact/com.autodesk.aps/sdkmanager) [![Latest version](https://img.shields.io/maven-central/v/com.autodesk.aps/sdkmanager.svg?label=Release)](https://central.sonatype.com/artifact/com.autodesk.aps/sdkmanager) [![Latest Beta version](https://img.shields.io/maven-central/v/com.autodesk.aps/sdkmanager.svg?label=Latest)](https://central.sonatype.com/artifact/com.autodesk.aps/sdkmanager/versions)
+
+[![Maven Package Site](https://img.shields.io/badge/Maven-com.autodesk.aps%3Awebhooks--sdk-blue.svg)](https://central.sonatype.com/artifact/com.autodesk.aps/webhooks-sdk) [![Latest version](https://img.shields.io/maven-central/v/com.autodesk.aps/webhooks-sdk.svg?label=Release)](https://central.sonatype.com/artifact/com.autodesk.aps/webhooks-sdk) [![Latest Beta version](https://img.shields.io/maven-central/v/com.autodesk.aps/webhooks-sdk.svg?label=Latest)](https://central.sonatype.com/artifact/com.autodesk.aps/webhooks-sdk/versions)
 
 ## Contributions
 
