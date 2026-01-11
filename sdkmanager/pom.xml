@@ -122,6 +122,6 @@
         <httpcomponents.version>5.5</httpcomponents.version>
         <jackson.version>2.15.3</jackson.version>
         <slf4j.version>2.0.9</slf4j.version>
-        <logback.version>1.4.12</logback.version>
+        <logback.version>1.5.22</logback.version>
     </properties>
 </project>
