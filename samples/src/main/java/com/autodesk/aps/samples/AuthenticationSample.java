@@ -32,8 +32,10 @@ public class AuthenticationSample {
     Dotenv dotenv = Dotenv.load();
     String clientId = dotenv.get("CLIENT_ID");
     String clientSecret = dotenv.get("CLIENT_SECRET");
+    String redirectUri = dotenv.get("REDIRECT_URI");
     String accessToken = dotenv.get("ACCESS_TOKEN");
-
+    String authorizationCode = dotenv.get("AUTHORIZATION_CODE");
+    String refreshToken = dotenv.get("REFRESH_TOKEN");
 
     void initialize() {
         SdkManager sdkManager = SdkManagerBuilder.create()
@@ -61,7 +63,6 @@ public class AuthenticationSample {
 
     void getAuthorizationUrl() {
         try {
-            String redirectUri = "http://localhost:8080/api/auth/callback";
             String url = authenticationClient.authorize(
                     clientId, ResponseType.CODE, redirectUri, new Scopes[] { Scopes.DATA_READ });
             System.out.println("Authorization URL: " + url);
@@ -72,10 +73,8 @@ public class AuthenticationSample {
 
     void getThreeLeggedToken() {
         try {
-            String code = "ue1c1.i-PO8aIVKr1kCg4T9JVVT-jzs8lTbn-BgzNLr8vc"; // You should set this in your .env
-            String redirectUri = "http://localhost:8080/api/auth/callback";
             ThreeLeggedToken response = authenticationClient.getThreeLeggedToken(
-                    clientId, code, redirectUri,
+                    clientId, authorizationCode, redirectUri,
                     new ThreeLeggedOptionalParams.Builder().clientSecret(clientSecret).build());
             System.out.println("ThreeLegged Access Token: " + response.getAccessToken() +
                     " Refresh Token: " + response.getRefreshToken());
@@ -84,10 +83,8 @@ public class AuthenticationSample {
         }
     }
 
-    void getRefreshToken() {
+    void refreshToken() {
         try {
-            String refreshToken = "ue1c1.j3kfrPjhTMX9gBTODSYHBSz8yfVyosOYlOjzHdFbeM"; // You should set this in your
-                                                                                      // .env
             RefreshTokenOptionalParams params = new RefreshTokenOptionalParams.Builder()
                     .clientSecret(clientSecret)
                     .build();
@@ -155,11 +152,11 @@ public class AuthenticationSample {
             authenticationSample.getTwoLeggedToken();
             authenticationSample.getAuthorizationUrl();
             authenticationSample.getThreeLeggedToken();
-            authenticationSample.getRefreshToken();
+            authenticationSample.refreshToken();
             authenticationSample.revokeToken();
             authenticationSample.getOidcSpecs();
             authenticationSample.getKeys();
-            authenticationSample.getUserInfo("YOUR_ACCESS_TOKEN");
+            authenticationSample.getUserInfo(authenticationSample.accessToken);
             authenticationSample.logout();
 
         } catch (Exception e) {
