@@ -199,7 +199,15 @@ public enum Events {
   
   ISSUE_RESTORED_1_0("issue.restored-1.0"),
   
-  ISSUE_UNLINKED_1_0("issue.unlinked-1.0");
+  ISSUE_UNLINKED_1_0("issue.unlinked-1.0"),
+  
+  DT_APPLY_TEMPLATE("dt.applyTemplate"),
+  
+  DT_REMOVE_TEMPLATE("dt.removeTemplate"),
+  
+  DT_MUTATION("dt.mutation"),
+  
+  DT_ALERT("dt.alert");
 
   private String value;
 
