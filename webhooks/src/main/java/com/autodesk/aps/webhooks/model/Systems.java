@@ -43,7 +43,9 @@ public enum Systems {
 
   AUTODESK_CONSTRUCTION_BC("autodesk.construction.bc"),
 
-  AUTODESK_CONSTRUCTION_ISSUES("autodesk.construction.issues");
+  AUTODESK_CONSTRUCTION_ISSUES("autodesk.construction.issues"),
+
+  ADSK_TANDEM("adsk.tandem");
 
   private String value;
 
