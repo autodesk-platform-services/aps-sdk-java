@@ -67,6 +67,11 @@
             <artifactId>webhooks-sdk</artifactId>
             <version>${autodesk-webhooks-sdk-version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.autodesk.aps</groupId>
+            <artifactId>secureserviceaccount-sdk</artifactId>
+            <version>${autodesk-secureserviceaccount-sdk-version}</version>
+        </dependency>
           <dependency>
             <groupId>io.github.cdimascio</groupId>
             <artifactId>java-dotenv</artifactId>
@@ -80,6 +85,7 @@
         <autodesk-authentication-sdk-version>0.1.0-beta</autodesk-authentication-sdk-version>
         <autodesk-webhooks-sdk-version>0.1.0-beta</autodesk-webhooks-sdk-version>
         <autodesk-oss-sdk-version>0.1.0-beta</autodesk-oss-sdk-version>
+        <autodesk-secureserviceaccount-sdk-version>1.0.0-beta</autodesk-secureserviceaccount-sdk-version>
         <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
         <java-dotenv-version>5.2.2</java-dotenv-version>
         <maven-compiler-source-version>21</maven-compiler-source-version>
